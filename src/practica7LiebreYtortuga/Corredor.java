@@ -11,13 +11,13 @@ public class Corredor extends Thread {
 
 	public void run() {
 		while (Cursa.casillasT < 70 && Cursa.casillasL < 70) {
-			//ponemos un sleep de un segundo
+			//posem un sleep de un segundo
 			try {
 				Thread.sleep(1000);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-			// numero aleatori de entrades entre 1 i 100 per calcular el percentatge
+			// nombre aleatori de entrades entre 1 i 100 per calcular el percentatge
 			Random rand = new Random();
 			int numero = rand.nextInt(101);
 			// si el animal es tortuga seguira les pautes de cursa de aquesta
@@ -36,7 +36,7 @@ public class Corredor extends Thread {
 					Cursa.casillasT = Cursa.casillasT + 1;
 					System.out.println("Avance lento T = casilla " + Cursa.casillasT);
 				}
-				// en canvi si el animal es liebre seguira les pautes de cursa de aquesta
+				// en canvi si el animal es llebra seguira les pautes de cursa de aquesta
 			} else if (animal == "L") {
 				if (numero <= 20) {
 					System.out.println("No se mueve L = casilla " + Cursa.casillasL);
@@ -63,7 +63,7 @@ public class Corredor extends Thread {
 				}
 			}
 		}
-		//damos el resultado en caso de que no se haya dado ya en otro thread
+		//donem el resultat en cas que no es haia ates ja en un altre thread
 		if (!Cursa.ResultadoDado) {
 			Cursa.ResultadoDado=true;
 			if (Cursa.casillasT >= 70 && Cursa.casillasL >= 70) {

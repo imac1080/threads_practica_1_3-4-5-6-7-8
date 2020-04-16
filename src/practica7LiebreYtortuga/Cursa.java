@@ -3,7 +3,7 @@ package practica7LiebreYtortuga;
 public class Cursa {
 	//creamos boleano para no repetir el resultado encada thread
 	public static boolean ResultadoDado =false;
-	// crea les caselles per la liebre y la tortuga
+	// crea les caselles per la llebre y la tortuga
 		public static	int casillasT=0;
 		public static	int casillasL=0;
 	public static void main(String[] args) throws InterruptedException {
